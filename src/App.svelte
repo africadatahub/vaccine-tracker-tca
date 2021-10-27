@@ -84,7 +84,7 @@
       currentView['population'] = cc.population
       currentView['date'] = cc.date
       currentView['location'] = cc.country
-      currentView['per100'] = cc.per_100
+      currentView['per100'] = +cc.per_100
       currentView['total_vaccinations'] = cc.total_doses
       currentView['flag'] = cc.flag
       currentView['iso_code'] = cc.iso_code
@@ -99,6 +99,8 @@
     await fetch(africaTalliesUrl)
       .then((response) => response.json())
       .then((response) => {
+        console.log(response)
+
         // add iso_codes
         response.forEach((c) => {
           let code = c.iso_code
@@ -175,6 +177,8 @@
   function hideMap() {
     showMap = !showMap
   }
+
+  // $: console.log(allCountries)
 </script>
 
 <header class="shadow">

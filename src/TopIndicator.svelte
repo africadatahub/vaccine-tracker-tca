@@ -6,7 +6,15 @@
   export let number = 0
   export let title
 
-  $: if (number < 200) {
+  // $: if (number < 200) {
+  //   number = +number.toFixed(1)
+  // } else {
+  //   number = formatMillions(+number)
+  // }
+
+  $: if (+number === 0) {
+    number = +number
+  } else if (number < 200) {
     number = +number.toFixed(1)
   } else {
     number = formatMillions(+number)
