@@ -2,7 +2,7 @@
 
 A version of the Vaccine Tracker v2. Built using [Svelte.js](svelte.dev/) and [Leaflet.js](https://leafletjs.com/).
 
-### Setup and running:
+### Usage:
 
 Install dependencies:
 
